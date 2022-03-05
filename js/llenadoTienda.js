@@ -18,24 +18,37 @@ let productos = [
 ]
 
 //Recorriendo un arreglo con js: Buscar, seleccionar...
-//cuando una función no tiene nombre, se llama 'funcion anonima' y solo se ejecuta una vez
+//cuando una función no tiene nombre, se llama 'funcion anonima' y solo se ejecuta una vez porque no se puede llamar desde otro lugar del código.
+//creando la referencia al componente padre- creando variable para almancenar la base sobre la cual voy a pintar
+
+let fila = document.getElementById("fila")
 
 productos.forEach(function(producto){
-    console.log("holi")
+    console.log(producto.nombre)
+    console.log(producto.precio)
+    console.log(producto.foto)
+    /*receta para pintar con js:
+    1.Crear la estuctura que necesite
+       creo la columna*/
+    let columna=document.createElement("div")
+    columna.classList.add("col")
+    //creo la tarejta
+    let tarjeta = document.createElement("div")
+    tarjeta.classList.add("card")
+    tarjeta.classList.add("h-100")
+    //creando la imagen
+    let foto = document.createElement("img")
+    foto.classList.add("card-img-top")
+    foto.src = producto.foto
+    /*2.Ordenar la estructura:
+       Padres e hijos:*/
+    tarjeta.appendChild(foto)
+    columna.appendChild(tarjeta)
+    fila.appendChild(columna)
+
+
+    
+
 })
 
-//Escuchando clic en el botón
-
-let boton = document.getElementById("boton")
-
-//Detectando un evento
-
-boton.addEventListener("click", cambiarFoto())
-
-//Creando una funcion
-
-function cambiarFoto()
-{
-    console.log("Ha hecho clic en el botón")
-}
 
