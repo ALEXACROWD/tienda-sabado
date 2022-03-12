@@ -1,4 +1,6 @@
-//Arreglo de objetos
+
+export function pintarTienda(){
+    //Arreglo de objetos
 
 let productos = [
     {nombre: "Figura Eva01", precio: 1000000, foto: 'img/EvaFi.jpg', descripcion: "Figura del Eva 01 de la batlla contra el Eva 04"},
@@ -27,28 +29,63 @@ productos.forEach(function(producto){
     console.log(producto.nombre)
     console.log(producto.precio)
     console.log(producto.foto)
+
     /*receta para pintar con js:
     1.Crear la estuctura que necesite
        creo la columna*/
     let columna=document.createElement("div")
     columna.classList.add("col")
+
     //creo la tarejta
     let tarjeta = document.createElement("div")
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
+
     //creando la imagen
     let foto = document.createElement("img")
     foto.classList.add("card-img-top")
     foto.src = producto.foto
+
+    //Crear un botón
+    let boton = document.createElement("buttom")
+    boton.setAttribute("type", "buttom")
+    boton.classList.add("btn", "btn-info", "mx-4")
+    boton.textContent="Ver más"
+
+    //creando nombre del producto
+    let nombreProducto = document.createElement("h3")
+    nombreProducto.classList.add("card-tittle")
+    nombreProducto.textContent=producto.nombre
+
+    //Creando el precio
+    let precioProducto = document.createElement("h4")
+    nombreProducto.classList.add("card-text")
+    precioProducto.textContent=precioProducto.precio
+
+    //Creando lan descripcion
+    let descripcionProducto =document.createElement("p")
+    descripcionProducto.classList.add("card-text")
+    descripcionProducto.textContent=descripcionProducto.descripcion
+
     /*2.Ordenar la estructura:
        Padres e hijos:*/
     tarjeta.appendChild(foto)
+    tarjeta.appendChild(precioProducto)
+    tarjeta.appendChild(nombreProducto)
+    tarjeta.appendChild(descripcionProducto)
+    tarjeta.appendChild(boton)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
 
-
-    
-
+    //h4 con la clase text-center
+    let titulo = document.createElement("h4")
+    titulo.classList.add("text-center")
+    titulo.textContent=producto.nombre
 })
+
+let boton = document.getElementById("buttom")
+
+
+}
 
 

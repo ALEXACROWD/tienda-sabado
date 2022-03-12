@@ -1,20 +1,16 @@
-//Comentario de linea
+///Importando módulos
+import {pintarTienda} from './llenadoTienda.js'
+import {ampliarImformacion} from './ampliarInfo.js'
 
-/* comentario de bloque
-holo
-que hace
-*/
+//llamando módulos
+pintarTienda()
+//ampliarImformacion()
 
-//Variables
-let nombre = "Juan";
-let estaturaUsuario = 1.70;
-let edadUsuario = 29;
-let telefonoUsuario = '3207365361';
-let esPaisa = true; //Banderas
-
-const APELLIDOS_USUARIO = 'Marulanda Molina';
-
-
-
-
-//Salidas
+//llamando al módulo de pintar información
+let contenedorTienda=document.getElementById("fila")
+contenedorTienda.addEventListener("click", function(event){
+    
+    let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
+    ampliarImformacion(event)
+    modalinfoproducto.show()
+})
