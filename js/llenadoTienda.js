@@ -26,9 +26,9 @@ let productos = [
 let fila = document.getElementById("fila")
 
 productos.forEach(function(producto){
-    console.log(producto.nombre)
-    console.log(producto.precio)
-    console.log(producto.foto)
+    //console.log(producto.nombre)
+    //console.log(producto.precio)
+    //console.log(producto.foto)
 
     /*receta para pintar con js:
     1.Crear la estuctura que necesite
@@ -70,21 +70,14 @@ productos.forEach(function(producto){
     /*2.Ordenar la estructura:
        Padres e hijos:*/
     tarjeta.appendChild(foto)
-    tarjeta.appendChild(precioProducto)
     tarjeta.appendChild(nombreProducto)
-    tarjeta.appendChild(descripcionProducto)
     tarjeta.appendChild(boton)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)
+    tarjeta.appendChild(precioProducto)
+    tarjeta.appendChild(descripcionProducto)
 
-    //h4 con la clase text-center
-    let titulo = document.createElement("h4")
-    titulo.classList.add("text-center")
-    titulo.textContent=producto.nombre
 })
-
-let boton = document.getElementById("buttom")
-
 
 }
 
