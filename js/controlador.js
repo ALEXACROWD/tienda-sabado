@@ -1,6 +1,6 @@
 ///Importando módulos
 import {pintarTienda} from './llenadoTienda.js'
-import {ampliarImformacion} from './ampliarInfo.js'
+import {ampliarImformacion} from '/js/ampliarInfo.js'
 
 //llamando módulos
 pintarTienda()

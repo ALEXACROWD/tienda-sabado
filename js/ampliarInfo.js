@@ -13,10 +13,13 @@ export function ampliarImformacion(event){
         //asociando los valores respectivos al modal
         let foto = document.getElementById("fotoinfo")
         foto.src=producto.foto
+
         let nombre = document.getElementById("nombreinfo")
         nombre.textContent=producto.nombre
+
         let precio = document.getElementById("precioinfo")
         precio.textContent=producto.precio
+        
         let descripcion = document.getElementById("descripcioninfo")
         descripcion.textContent=producto.descripcion
 
