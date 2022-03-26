@@ -26,9 +26,9 @@ let productos = [
 let fila = document.getElementById("fila")
 
 productos.forEach(function(producto){
-    console.log(producto.nombre)
+    /*console.log(producto.nombre)
     console.log(producto.precio)
-    console.log(producto.foto)
+    console.log(producto.foto)*/
 
     /*receta para pintar con js:
     1.Crear la estuctura que necesite
