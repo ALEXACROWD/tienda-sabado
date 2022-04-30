@@ -123,5 +123,9 @@ botonCarrito.addEventListener("click", function(event){
 
     })
 
+    //let total = document.createElement("h4")
+    //total.classList.add("text-center")
+    //total.textContent = "Total: " + subtotal
+
     modalventa.show()
 })
