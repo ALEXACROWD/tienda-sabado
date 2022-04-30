@@ -16,7 +16,8 @@ let productos = [
     {nombre: "Pad", precio: 1000000, foto: 'img/Pad.jpg', descripcion: "Pad Mouse y teclado con imagen de Rei"},
     {nombre: "Rei Ayanami", precio: 1000000, foto: 'img/Rei.jpg', descripcion: "Figura de Rei Ayanami, piloto del Eva 00"},
     {nombre: "Sinji Ikari", precio: 1000000, foto: 'img/Shinji.jpg', descripcion: "Figura de Shinji Ikari, piloto del Eva 01"},
-    {nombre: "Reloj", precio: 1000000, foto: 'img/watch.jpg', descripcion: "Reloj analógico negro, con Colores y fondo del Eva01"}
+    {nombre: "Smart Watch", precio: 1000000, foto: 'img/watch.jpg', descripcion: "Reloj inteligente con motivo de Asuka Langley"},
+    {nombre: "Smart Phone", precio: 1000000, foto: 'img/phone.jpg', descripcion: "Smart phone edición limitada Eva 01"}
 ]
 
 //Recorriendo un arreglo con js: Buscar, seleccionar...
@@ -60,7 +61,7 @@ productos.forEach(function(producto){
     //Creando el precio
     let precioProducto = document.createElement("h4")
     nombreProducto.classList.add("text-center")
-    precioProducto.textContent=producto.precio
+    precioProducto.textContent= producto.precio
 
     //Creando lan descripcion
     let descripcionProducto =document.createElement("p")
